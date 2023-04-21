@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Start Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+</body>
+<form action="GivemeSomething" method="get" onsubmit="return validarFormulario()">
+    <label for="numero">Number</label><br>
+    <input type="number" id="id" name="id">
+    <button type="submit">Enviar</button>
+</form>
+<script>
+  function validarFormulario() {
+    // Obtener el valor del campo de número
+    const numero = document.getElementById("numero").value;
+
+    // Verificar si el número es un número válido
+    if (isNaN(numero) || numero === "") {
+      // Si no es válido, mostrar un mensaje de error
+      alert("Por favor ingrese un número válido.");
+      // Devolver false para evitar el envío del formulario
+      return false;
+    }
+
+    // Si el número es válido, devolver true para permitir el envío del formulario
+    return true;
+  }
+</script>
+</html> 
